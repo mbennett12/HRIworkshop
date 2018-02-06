@@ -55,7 +55,7 @@
 \let\labelindent\relax
 \usepackage[keeplastbox]{flushend}
 \usepackage{amsmath,amssymb,enumitem}
-
+\usepackage{xcolor}\newcommand\todo[1]{\textcolor{blue}{#1}}
 \begin{document}
 
 %% % Copyright
@@ -190,41 +190,36 @@
 %\thispagestyle{empty}
 %\pagestyle{empty}
 
-\begin{abstract}
-As the linguistic capabilities of interactive robots advance, %in
-%sophistication, 
-it becomes increasingly important to understand how
-humans will instruct robots through natural language.
-%% , and how
-%% this might differ from how they instruct fellow humans.
-What is
-more, with the increased use of teleoperated humanoid robots,
-it is important to recognize whether any differences between instructions
-given to humans and to robots are due to the physical embodiment or 
-to the perceived autonomy of the instructee.
+\begin{abstract}  
+With the increased use of teleoperated humanoid robots, it is
+important to understand how physical embodiment and perceived autonomy
+affect how humans instruct autonomous and teleoperated robots, as well
+as humans.
+%% it is important to recognize whether any differences between instructions
+%% given to humans and to robots are due to the physical embodiment or 
+%% to the perceived autonomy of the instructee.
 %% As sliding autonomy and shared control are increasingly used in
 %% teleoperated and telepresence robots, it becomes increasingly
 %% important to understand how differing levels 
 %% of robot autonomy affect how humans interact with such
 %% robots.
-In this paper, we present the results of a human-subject
-experiment in which participants interacted in a collaborative, 
-task-based setting with both a human and a 
-suit-based, teleoperated humanoid robot said to be either autonomous
-or teleoperated. 
+In this paper, we discuss how a novel suit-based VR teleoperation
+interface and paired humanoid robot allowed us to investigate these
+differences. We present both our empirical results, as well as lessons
+learned with respect to the design and use of such teleoperation interfaces.
 
-Our results suggest that humans will use politeness
-strategies equally with human, autonomous robotic, and
-teleoperated robotic teammates, reinforcing
-recent findings that autonomous robots must % be able to
-comprehend and appropriately respond to human utterances that follow
-such strategies.
-%
-Our results also suggest variations in how %these
- different
-teammates were perceived. Specifically, our results suggest that human-teleoperated robots were perceived as less intelligent than human
-teammates; a finding 
-with serious implications for human-robot team dynamics.
+%% Our results suggest that humans will use politeness
+%% strategies equally with human, autonomous robotic, and
+%% teleoperated robotic teammates, reinforcing
+%% recent findings that autonomous robots must % be able to
+%% comprehend and appropriately respond to human utterances that follow
+%% such strategies.
+%% %
+%% Our results also suggest variations in how %these
+%%  different
+%% teammates were perceived. Specifically, our results suggest that human-teleoperated robots were perceived as less intelligent than human
+%% teammates; a finding 
+%% with serious implications for human-robot team dynamics.
 \end{abstract}
 
 
@@ -280,9 +275,9 @@ with serious implications for human-robot team dynamics.
 %studies}
 
 \section{Introduction}
-(Max \textit{slightly} modified)
-As the physical capabilities of interactive robots advances,
-it becomes increasingly important to understand how
+%% \todo{Why does this start re: physical capabilities, while the
+%%   abstract starts re: linguistic capabilities?}
+It is becoming increasingly important to understand how
 humans will perceive and instruct robots. Knowing
 how humans will instruct robots is especially important both for
 robot developers seeking to enable learning-from-demonstration capabilities
@@ -300,16 +295,17 @@ differences in human-to-human and human-to-robot instructions, it has
 not considered such possible effects. Furthermore, in that work a
 specific instruction task was provided by the experimenters, which may
 have biased the utterances used in 
-task instructions. 
-Thus, in this work we present an experiment
-investigating the linguistic differences between human-to-human and
-human-to-robot task instructions %for both autonomous and teleoperated
-%robots 
-using a paradigm in which participants sequentially teach a human and
-a robot (believed by participants to be either autonomous or
-human-teleoperated) how to arrange a set of objects in a unique manner
-and determined by each participant. 
-
+task instructions.
+%
+%% Thus, in this paper we present an experiment
+%% investigating the linguistic differences between human-to-human and
+%% human-to-robot task instructions %for both autonomous and teleoperated
+%% %robots 
+%% using a paradigm in which participants sequentially teach a human and
+%% a robot (believed by participants to be either autonomous or
+%% human-teleoperated) how to arrange a set of objects in a unique manner
+%% and determined by each participant. 
+%
 %To better understand the causes of linguistic differences, %% whether any differences were due to
 %%% perceived differences in either physical embodiment or autonomy,
 %we also evaluated
@@ -321,9 +317,14 @@ knowledge all previous research investigating human perceptions of
 autonomous versus teleoperated robots has been \textit{observational},
 and has used robots controlled
 through graphical interfaces.
-In contrast, we study actual \textit{interactions}, and use a novel,
-immersive interface in which teleoperator motions are replicated by a
-robot in real time.
+
+In this paper we describe a novel VR teleoperation interface
+in which teleoperator motions are replicated by a
+robot in real time, and
+discuss how it allowed us to better investigate \emph{interaction} differences between
+human-to-human and human-to-robot task instructions, as originally
+described in our previous work~\cite{yourIROSpaper}.
+
 %% , allowing realistic, spontaneous, task-based
 %% interactions.
 
@@ -333,17 +334,17 @@ robot in real time.
 %% of robot autonomy affect how humans interact with such
 %% robots.
 
-In Section~\ref{sec:rw} we discuss previous work informing
-our experiment.
-%% describe the novel dimensions
-%% of this experiment through a deeper analysis of previous work.
-In
-Section~\ref{sec:exp} we then discuss the design
-of a human-subject experiment to investigate our questions of
-interest. In Section~\ref{sec:results} we present the results of that
-experiment, and discuss our findings in
-Section~\ref{sec:disc}. Finally, we conclude with design
-recommendations and directions for future work in Section~\ref{sec:conc}.
+%% In Section~\ref{sec:rw} we discuss previous work informing
+%% our experiment.
+%% %% describe the novel dimensions
+%% %% of this experiment through a deeper analysis of previous work.
+%% In
+%% Section~\ref{sec:exp} we then discuss the design
+%% of a human-subject experiment to investigate our questions of
+%% interest. In Section~\ref{sec:results} we present the results of that
+%% experiment, and discuss our findings in
+%% Section~\ref{sec:disc}. Finally, we conclude with design
+%% recommendations and directions for future work in Section~\ref{sec:conc}.
 
 %% =======================================================================
 
@@ -494,7 +495,6 @@ recommendations and directions for future work in Section~\ref{sec:conc}.
 
 \section{Related Work}
 \label{sec:rw}
-(Max modified)
 
 %\subsection{Linguistic Interaction with Robots vs. Humans}
 %Recently, there has been much %% a significant amount
@@ -550,7 +550,7 @@ recommendations and directions for future work in Section~\ref{sec:conc}.
 %% \textbf{MB to TW: This paper is long and informative but not sure exactly what to pull from it beyond definitions and such if that's necessary. I did find more studies from it, though. }
 %% \\
 
-\subsection{Perceptions of Autonomous vs. Teleoperated Robots}
+%\subsection{Perceptions of Autonomous vs. Teleoperated Robots}
 %% The increasing use of ``sliding autonomy'' control interfaces
 %% that allow robots to be variably autonomous and teleoperated presents
 %% a need for research into how autonomous and teleoperated robots will
@@ -582,19 +582,20 @@ recommendations and directions for future work in Section~\ref{sec:conc}.
 %with the
 %notable exception of Weiss et al.'s experiment, 
 
-In the recent decades, 
-little  empirical
+While there has been significant research into robot teleoperation in
+general, little  empirical
 research has made use of teleoperated \emph{humanoid} robots. This is
 deeply problematic because humanoid robots are uniquely suited to
 perform many tasks in environments 
 designed for human beings~\cite{goodrich2013teleoperation}, and
 because research has shown that humanoid robots may be perceived using
 the same cognitive processes normally reserved for perception of human
-agents~\cite{oztop2005human}. \textbf{[@TW, is this next sentence still true?]}
-Furthermore, to the best of our knowledge,
+agents~\cite{oztop2005human}. 
+Furthermore, to the best of our knowledge, when the work presented in
+this paper was performed,
 %@TW are we sure that *all* is true? all from our analysis, at least...
 all previous
-\emph{empirical research} involving teleoperated robots has relied on
+\emph{empirical research} involving teleoperated robots had relied on
 joystick based  or graphical interface based Wizard-of-Oz
 interfaces~\cite{Stilman2008humanoid,goodrich2013teleoperation}. 
 
@@ -636,7 +637,7 @@ control. This
  not only allows the teleoperator to visually explore their environment the way they would if they were present in that environment, but also
  provides remote teammates information regarding the location of the
  teleoperator's gaze, which is a valuable source of information both for completion of task-based goals and for engaging in dialogue-based
- interaction~\cite{williams2017chi,mutlu2009footing,Kindred}
+ interaction~\cite{mutlu2009footing,Kindred}
 
 
 %
@@ -840,15 +841,16 @@ that teleoperated robots would be perceived as more
 successful after completing a task than would an autonomous robot.
 
 
-\subsection{Experiment Design}
+\subsection{Experimental Design}
+%\todo{I would cut this subsection by ~50\%}
 %% To investigate how humans would instruct and perceive humans versus
 %% %% robots (specifically 
 %% teleoperated or autonomous robots with
 %% human-like morphology and actions,%% ),
 We conducted a laboratory study in
-which each
-participant was required to %% sequentially
-teach a new skill to a \textbf{human} learner and to a \textbf{robot}
+which
+participants each taught %was required to %% sequentially
+a new skill to a \textbf{human} learner and to a \textbf{robot}
 learner.
 Participants were either told that the robot
 learner was \textbf{teleoperated (TC)}  or \textbf{autonomous (AC)}.
@@ -856,21 +858,20 @@ learner was \textbf{teleoperated (TC)}  or \textbf{autonomous (AC)}.
 We used identical Wizard-of-Oz
 interfaces in both conditions,
 meaning that any differences between robots existed %not with
-                                %the robots themselves, but 
+%the robots themselves, but 
 solely in participants' minds. We would expect participants in the \textbf{TC} condition to
 assume the teleoperator to have identical cognitive capabilities and
 reduced physical capabilities to a co-present human, and participants
 in the \textbf{AC} condition to assume the robot to have
 reduced cognitive \textit{and} physical capabilities to a co-present human.
-
-These conditions were combined to yield a 2x2 mixed-factorial study in which each participant
-interacted with two agents: a human and a robot (a 
-within-subject manipulation). The order of these two interactions was
-counterbalanced to prevent ordering effects. Half of 
-participants were told that the robot would be an autonomous robot, and half
-of participants were told that the robot would be a teleoperated,
-human-controlled robot
-(a between-subject manipulation).
+%% These conditions were combined to yield a 2x2 mixed-factorial study in which each participant
+%% interacted with two agents: a human and a robot (a 
+%% within-subject manipulation). The order of these two interactions was
+%% counterbalanced to prevent ordering effects. Half of 
+%% participants were told that the robot would be an autonomous robot, and half
+%% of participants were told that the robot would be a teleoperated,
+%% human-controlled robot
+%% (a between-subject manipulation).
 
 Participants interacted with each agent by teaching them how to
 complete a task in a large experiment
@@ -878,15 +879,16 @@ room divided into two areas: a
 \textit{teaching} area in which the participant was seated, and a
 large \textit{experiment} area. Participants were seated in front of a
 \textit{diorama} which replicated the experiment area in
-miniature (Figs.~\ref{fig:roomsetup}~and~\ref{fig:diorama}). Both the diorama and experiment area were divided into four 
+miniature (Fig.~\ref{fig:roomsetup}%% ~and~\ref{fig:diorama}
+). Both the diorama and experiment area were divided into four 
 quadrants containing a variety of objects: four cardboard boxes
-(each of which was labeled with a different letter),
-and three colored towers (comprised of Lego blocks in the diorama and
+(each labeled with a different letter),
+and three colored towers (Lego blocks in the diorama and
 aluminum cans in the experiment area). 
 
 Participants were told to arrange their diorama \emph{however they
-  wished}, with only a few limitations (i.e., cans could not be
-translated, boxes could not be flipped over or stacked), %% (a crucial decision made to reduce the potential for
+  wished} (excepting that cans could not be
+translated, and boxes could not be flipped over or stacked), %% (a crucial decision made to reduce the potential for
 %% experimental bias),
 after which they would be tasked with teaching a human or robot agent how to
 replicate that arrangement using the full-size objects found in the
@@ -907,12 +909,12 @@ things.
                                 % objects.
 }\label{fig:roomsetup}
 \end{figure}
-\begin{figure}
-\centering
-\includegraphics[height=0.45\linewidth]{Diorama1.jpg}
-\includegraphics[height=0.45\linewidth]{Diorama2.jpg}
-\caption{Starting diorama and example arrangement.}\label{fig:diorama}
-\end{figure}
+%% \begin{figure}
+%% \centering
+%% \includegraphics[height=0.45\linewidth]{Diorama1.jpg}
+%% \includegraphics[height=0.45\linewidth]{Diorama2.jpg}
+%% \caption{Starting diorama and example arrangement.}\label{fig:diorama}
+%% \end{figure}
 After participants finished arranging their diorama however they
 wished, the researcher retrieved the first agent.
 %% one of the agents (either 
@@ -936,7 +938,6 @@ Once the interaction was finished, the agent said ``Goodbye'' and left
 the room.  
 
 \subsection{Teleoperation Interfaces}
-(Max modified)
 %Let us now highlight
 %%% Before we discuss the hypotheses this experiment was designed to test,
 %%% we would like to highlight
@@ -989,7 +990,7 @@ so that language and sounds could be spatially localized even if the
 audio source was not in the robot's line of sight. A set of 3 pedals
 were used to move the 4-wheeled base of the robot.
 
-Lastly, in order to standardize language and voice used throughout
+Lastly, to standardize language and voice used throughout
 the study, the robot's voice output was controlled by a second 
 operator using a 
 limited text-to-speech interface which allowed the robot to utter 
@@ -1068,12 +1069,12 @@ human confederate.
 %
 %
 \subsection{Experimental Procedure and Participation}
-\begin{figure}[ht]
-\includegraphics[width=0.5\textwidth]{IROS_PROCEDURE-1.png}
-\caption{Experimental Procedure}\label{fig:procedure}
-\end{figure}
+%% \begin{figure}[ht]
+%% \includegraphics[width=0.5\textwidth]{IROS_PROCEDURE-1.png}
+%% \caption{Experimental Procedure}\label{fig:procedure}
+%% \end{figure}
 %
-We will now discuss our experimental procedure (Fig.~\ref{fig:procedure}).
+%We will now discuss our experimental procedure. (Fig.~\ref{fig:procedure}).
 Participants first completed a questionnaire 
 gathering information on participants' demographics and  
 previous 
@@ -1110,20 +1111,20 @@ In addition to the demographic survey, as previously described,
 questionnaires were used to
 gather data regarding participants' perceptions of their human and
 robot teammates. 
-Participants' views on the
-following properties of the robot and human were analyzed:
-cooperativity, capability, annoyingness, creepiness, responsiveness, 
-belief \textit{before} meeting the learner that the learner would be capable of replicating the
-participant's block arrangement (1=``strongly disagree'' to
-7=``strongly agree''), attentiveness, gaze-following,
-tendency-to-ignore, understanding, belief \textit{after} meeting
-the learner that the learner would be capable of replicating the
-participant's block arrangement (1=``no'' to 7=``yes''), arrangement
-complexity (1=``simple'' to 7=``very complex''), ease of interaction
-(1=``easy'' to 7=``hard''), level of comprehension (1=``low'' to 7=``high''), and
-successfulness (1=``completely unsuccessful'' to 7=``very successful'').
-Finally, participants were asked to imagine if, in an alternate interaction with the robot, they believed that the robot would have been capable of
-understanding three commands within that new task.
+Participants' perceptions of the robot along a variety of dimensions,
+including cooperativity, capability, annoyingness, creepiness, and
+responsiveness
+%% belief \textit{before} meeting the learner that the learner would be capable of replicating the
+%% participant's block arrangement (1=``strongly disagree'' to
+%% 7=``strongly agree''), attentiveness, gaze-following,
+%% tendency-to-ignore, understanding, belief \textit{after} meeting
+%% the learner that the learner would be capable of replicating the
+%% participant's block arrangement (1=``no'' to 7=``yes''), arrangement
+%% complexity (1=``simple'' to 7=``very complex''), ease of interaction
+%% (1=``easy'' to 7=``hard''), level of comprehension (1=``low'' to 7=``high''), and
+%% successfulness (1=``completely unsuccessful'' to 7=``very successful'').
+%% Finally, participants were asked to imagine if, in an alternate interaction with the robot, they believed that the robot would have been capable of
+%% understanding three commands within that new task.
 
 %% Finally, participants were asked to imagine that the four boxes had
 %% been blocks of different colors, and asked them whether they believed
@@ -1143,33 +1144,35 @@ recording was used to assess the number of words used by participants,
 and the percentage of
 utterances used by 
 participants that were ISAs, as well as the
-\textit{complexity} of participants' arrangements, as assessed by the
-metric discussed below. Arrangement complexity
-was calculated to use as a covariate in our analyses, as we are
-interested in the indirectness of participants' utterances and the number
-of words required to accomplish the given tasks
-\emph{regardless of task complexity}. For example, using an
-external complexity estimate as a covariate will allow us to control
-for the fact that more complex tasks 
-likely require more words to complete. 
+complexity of participants' arrangements, as described in our previous
+work~\cite{yourIROSpaper}.
+%% , as assessed by the
+%% metric discussed below. Arrangement complexity
+%% was calculated to use as a covariate in our analyses, as we are
+%% interested in the indirectness of participants' utterances and the number
+%% of words required to accomplish the given tasks
+%% \emph{regardless of task complexity}. For example, using an
+%% external complexity estimate as a covariate will allow us to control
+%% for the fact that more complex tasks 
+%% likely require more words to complete. 
 
-Arrangement complexity was calculated as
-$(b_0+b_1+b_2+b_3)+(t_0+t_1+t_2)+s$, where each box
-$B_i$ contributed $b_i$ points if moved (equal to the number of
-centimeters moved within the diorama), each tower $T_i$ contributed
-$t_i$ points if knocked down (equal to one-half its distance from the
-center of the diorama), and a ``systematicity bonus'' $s$ was added
-equal to the smallest number of groups $c_0,...c_n$ that
-could be formed by grouping the boxes by symmetry of
-motion\footnote{For example, all four boxes moving one quadrant
-counter-clockwise yields one group; two boxes rotating counter-clockwise and
-the others not moving yields two groups; two boxes rotating counter-clockwise, one box
-not moving, and one box moving to the far right of its
-quadrant yields three groups; one box
-rotating counter-clockwise, one box not moving,
-one box moving to the far right of its quadrant, and one box moving to
-the center corner of its quadrant yields four
-groups. }, as depicted in Fig.~\ref{fig:dioramac}.
+%% Arrangement complexity was calculated as
+%% $(b_0+b_1+b_2+b_3)+(t_0+t_1+t_2)+s$, where each box
+%% $B_i$ contributed $b_i$ points if moved (equal to the number of
+%% centimeters moved within the diorama), each tower $T_i$ contributed
+%% $t_i$ points if knocked down (equal to one-half its distance from the
+%% center of the diorama), and a ``systematicity bonus'' $s$ was added
+%% equal to the smallest number of groups $c_0,...c_n$ that
+%% could be formed by grouping the boxes by symmetry of
+%% motion\footnote{For example, all four boxes moving one quadrant
+%% counter-clockwise yields one group; two boxes rotating counter-clockwise and
+%% the others not moving yields two groups; two boxes rotating counter-clockwise, one box
+%% not moving, and one box moving to the far right of its
+%% quadrant yields three groups; one box
+%% rotating counter-clockwise, one box not moving,
+%% one box moving to the far right of its quadrant, and one box moving to
+%% the center corner of its quadrant yields four
+%% groups. }, as depicted in Fig.~\ref{fig:dioramac}.
 %Note that this is only intended as a means to
 %estimate complexity within this experiment, and is not intended for
 %use beyond this experiment.
@@ -1187,84 +1190,33 @@ groups. }, as depicted in Fig.~\ref{fig:dioramac}.
 %% formed by grouping the motion of the cardboard boxes by symmetry of
 %% motion. 
 %
-\begin{figure}
-\centering
-\includegraphics[width=0.28\textwidth]{DioramaC.jpg}
-\caption{Sample complexity diagram for Fig.~\ref{fig:diorama}
-  arrangements.
-  %shown
-  %in . %% Here, each box contributed an
-  %% amount equivalent to the length of complexity would be
-  %% calculated as $b_0+b_1+b_2+t_0+c_0+c_1+c_2$, where $b_i$ is the
-  %% length of the shown arrow, in centimeters, $t_0$ is one-half the
-  %% distance from the yellow tower to the center of the diorama, in
-  %% centimeters, and $c_i$=1.
-}\label{fig:dioramac}
-\end{figure}
+%% \begin{figure}
+%% \centering
+%% \includegraphics[width=0.28\textwidth]{DioramaC.jpg}
+%% \caption{Sample complexity diagram for Fig.~\ref{fig:diorama}
+%%   arrangements.
+%%   %shown
+%%   %in . %% Here, each box contributed an
+%%   %% amount equivalent to the length of complexity would be
+%%   %% calculated as $b_0+b_1+b_2+t_0+c_0+c_1+c_2$, where $b_i$ is the
+%%   %% length of the shown arrow, in centimeters, $t_0$ is one-half the
+%%   %% distance from the yellow tower to the center of the diorama, in
+%%   %% centimeters, and $c_i$=1.
+%% }\label{fig:dioramac}
+%% \end{figure}
 %
 \section{Results}
 \label{sec:results}
-%\textbf{Template:}
-%
-%
-%Questionnaire responses were analyzed using mixed ANOVAs with two
-%independent variables: main experimental condition (autonomous
-%vs. teleoperated, between-subjects), and interaction order (robot
-%first vs. human-first, within-subjects). Participants' views on the
-%following properties were analyzed: (list items we asked about)
-%(1=strongly disagree to 7=strongly agree). Interaction effects were
-%found for XYZ, as seen in table XYZ. For ABC, no effect of order was
-%observed, and one-way ANOVAs assessing only the main experimental
-%condition were used to better investigate the effects of the main
-%condition. Significant effects of main condition were thus found for
-%ABC, as seen in table ABC.
-%
-%An analysis of covariance (ANCOVA) was performed for the behavioral
-%measures, using the same independent variables as the original
-%analysis, and arrangement complexity as a covariate. The results
-%showed that XYZ.
-%
-Participants' questionnaire responses were analyzed using mixed Analyses of Variance (ANOVAs) with two
-independent variables: main experimental condition (autonomous \textbf{(AC)}
-vs. teleoperated \textbf{(TC)}, between subjects), and interaction order (robot
-first vs. human-first, between-subjects). 
+In this section we provide a brief summary of our experimental
+results. We refer the interested reader to our full results described
+in our previous work~\cite{yourIROSpaper}. 
 
-For each of these variables, we first established that there were no
-main or interaction effects involving order of interaction, and then
-used ANOVAs to examine whether there were significant
-differences between robot and human learners, or between teleoperated and
-autonomous robot learners.
-
-\subsection{Objective Measures}
-
-While no differences were found in the percentage of learner-directed
-directives that were phrased indirectly vs. directly, a factorial
-logistic regression analysis yielded a marginal
-interaction effect with respect to whether or not
-participants used indirect utterances at all (odds ratio=0.13, probability value(p)=.053): In \textbf{AC}, 70.59\% of participants
+%% \subsection{Objective Measures}
+Analysis of our collected data showed that in \textbf{AC}, 70.59\% of participants
 used at least one ISA when directing another human but only 29.41\% of
-participants used one when directing a robot; in \textbf{TC}, 50.0\% of participants used at least one ISA when speaking with another human, but 56.25\% of participants used
-at least one when speaking to the teleoperated robot.
-
-%% A significant difference was found, however, between the AUTONOMOUS and
-%% TELEOPERATED conditions, for whether participants combined all their
-%% instructions into a single command or whether participants broke their
-%% instructions into individual commands that were delivered one at a
-%% time. Specifically, a significant difference was found between
-%% human-directed (in which instructions were provided in a single
-%% command 49.15\% of the time (SD=28.24)) and robot-directed utterances
-%% (in which instructions were provided in a single command 62.88\% of
-%% the time (SD=28.41)), F(1,29)=7.62, p=.010. 
-
-A significant difference was also found with respect to number of
-words used to describe the task to robot learners between \textbf{AC}
-and \textbf{TC}: %, %% when participants were told
-%% that the robot was AUTONOMOUS vs. TELEOPERATED
-%as seen in
-%Fig.~\ref{fig:wca}: % The results suggest that 
-participants used significantly more words to describe the task in the
-\textbf{TC} (Mean(M)=204.88, Standard Deviation(SD)=181.60) than in \textbf{AC} (M=72.82, SD=42.83), F(1,29)=8.05, p=.008. An Analysis of
-Covariance (ANCOVA) using task complexity as a covariate 
+participants used one when directing a robot, while in \textbf{TC}, 50.0\% of participants used at least one ISA when speaking with another human, but 56.25\% of participants used
+at least one when speaking to the teleoperated robot. Participants used significantly more words to describe the task in the
+\textbf{TC} (M=204.88, SD=181.60) than in \textbf{AC} (M=72.82, SD=42.83), F(1,29)=8.05, p=.008. An ANCOVA using task complexity as a covariate 
 attenuated this effect, F(1,29)=4.43, p=.02. 
 %
 %% \begin{figure}
@@ -1273,8 +1225,8 @@ attenuated this effect, F(1,29)=4.43, p=.02.
 %% \caption{Effect of autonomy on participant verbosity}\label{fig:wca}
 %% \end{figure}
 %
-Finally, a significant difference was found with respect to the
-number of words used by humans to describe the task to all learners:
+Finally, %% a significant difference was found with respect to the
+%% number of words used by humans to describe the task to all learners:
 %The results suggest that 
 participants used more words to describe the
 task (to either learner) in \textbf{TC}
@@ -1295,32 +1247,32 @@ strengthened in a subsequent ANCOVA, F(6,58)=3.25, p=.008.
 %% (e.g., moving a certain direction for a certain amount of time)
 %% vs. higher-level commands.
 
-\subsection{Subjective Measures}
-\subsubsection*{Differences by Purported Autonomy}
-In this section, we will describe differences we found between
-\textbf{AC} and \textbf{TC}. %% when
-%% participants were told that robot learners would be AUTONOMOUS vs. TELEOPERATED.
+%% \subsection{Subjective Measures}
+%% \subsubsection*{Differences by Purported Autonomy}
+%% In this section, we will describe differences we found between
+%% \textbf{AC} and \textbf{TC}. %% when
+%% %% participants were told that robot learners would be AUTONOMOUS vs. TELEOPERATED.
 %
-The results of our analyses suggest that participants in \textbf{AC}
-judged their arrangements to be less complex in 
-retrospect (M=2.53 SD=1.28) after interacting with robot learners
-than did participants in \textbf{TC}
-(M=4.00, SD=1.37), F(1,29)=9.92, p=.004. When arrangement complexity
-was treated as a covariate in a subsequent analysis of covariance,
-this effect was attenuated, F(2,29)=5.92, p=.007.
+%% Participants in \textbf{AC}
+%% judged their arrangements to be less complex in 
+%% retrospect (M=2.53 SD=1.28) after interacting with robot learners
+%% than did participants in \textbf{TC}
+%% (M=4.00, SD=1.37), F(1,29)=9.92, p=.004. When arrangement complexity
+%% was treated as a covariate in a subsequent analysis of covariance,
+%% this effect was attenuated, F(2,29)=5.92, p=.007.
 %
-Participants in \textbf{AC} less
-strongly agreed that robots could be conscious (M=3.06, SD=1.78) than
-those in \textbf{TC} (M=4.38, SD=1.59),
-F(1,29)=5.60, p=0.025, 
-%
-and less strongly believed that the robot learner had been following their
-gaze (M=4.06, SD=1.49) than did participants in \textbf{TC} (M=5.09, SD=1.19), F(1,29)=5.43, p=.027.
+%% Participants in \textbf{AC} less
+%% strongly agreed that robots could be conscious (M=3.06, SD=1.78) than
+%% those in \textbf{TC} (M=4.38, SD=1.59),
+%% F(1,29)=5.60, p=0.025, 
+%% %
+%% and less strongly believed that the robot learner had been following their
+%% gaze (M=4.06, SD=1.49) than did participants in \textbf{TC} (M=5.09, SD=1.19), F(1,29)=5.43, p=.027.
 
-\subsubsection*{Differences by Agent}
+%% \subsubsection*{Differences by Agent}
 A number of significant differences were found
 between perceptions of the human learners and the robot
-learners, as seen in Tab.~\ref{tab:diffAgent}:
+learners:%, as seen in Tab.~\ref{tab:diffAgent}:
 %
 %%  Participants rated human learners to be slightly more
 %% capable (M=6.88, SD=0.33) than robot learners
@@ -1363,7 +1315,7 @@ learners, as seen in Tab.~\ref{tab:diffAgent}:
 %
 \begin{table}[ht]
 \begin{small}
-\caption{Perceptions of Agents}\label{tab:diffAgent}
+%\caption{Perceptions of Agents}\label{tab:diffAgent}
 \begin{tabular}{l|llrr}
  & H(M, SD) & R(M, SD) & F(1,29)& p\\
 \hline
@@ -1405,31 +1357,31 @@ Perceived Success& 6.78, 0.48 & 6.12, 0.93 & 12.99 & .001\\
 %% (M=6.12, SD=0.93), F(1,29)=12.99, p=.001 (as
 %% seen in Fig.~\ref{fig:succa}).
 %
-Participants were also less likely to believe that a
-robot would understand each of the three alternate-scenario commands
-than %% they were
-that a human would, as seen in Tab.~\ref{tab:asc}:\\%, as seen in Tab.~\ref{tab:as} %% (M=5.15,SD=2.08 vs. 6.48
-%\begin{table}
-%\caption{Alternate scenario command understandability}\label{tab:as}
-%
-\begin{table}[ht]
-\begin{small}
-\caption{Alternate-Scenario Commands}\label{tab:asc}
-\begin{tabular}{l|llll}
- & Human(M,SD) & Robot (M,SD) & F(1,29)& p\\
-\hline
-C1 & 4.67,1.99 & 5.76,1.79 & 9.16, & .005\\
-C2 & 5.15,2.08 & 6.48,1.12 & 15.15 & $<$.001 \\
-C3 & 2.85,1.84 & 6.70,0.92 & 105.27 & $<$.001\\
-\end{tabular}
-\end{small}
-\end{table}
-%
-%% \begin{figure}
-%% \centering
-%% \includegraphics[width=0.7\linewidth]{Boxplots/Success(Agent).png}
-%% \caption{Effect of agent on participant success}\label{fig:succa}
-%% \end{figure}
+%% Participants were also less likely to believe that a
+%% robot would understand each of the three alternate-scenario commands
+%% than %% they were
+%% that a human would, as seen in Tab.~\ref{tab:asc}:\\%, as seen in Tab.~\ref{tab:as} %% (M=5.15,SD=2.08 vs. 6.48
+%% %\begin{table}
+%% %\caption{Alternate scenario command understandability}\label{tab:as}
+%% %
+%% \begin{table}[ht]
+%% \begin{small}
+%% \caption{Alternate-Scenario Commands}\label{tab:asc}
+%% \begin{tabular}{l|llll}
+%%  & Human(M,SD) & Robot (M,SD) & F(1,29)& p\\
+%% \hline
+%% C1 & 4.67,1.99 & 5.76,1.79 & 9.16, & .005\\
+%% C2 & 5.15,2.08 & 6.48,1.12 & 15.15 & $<$.001 \\
+%% C3 & 2.85,1.84 & 6.70,0.92 & 105.27 & $<$.001\\
+%% \end{tabular}
+%% \end{small}
+%% \end{table}
+%% %
+%% %% \begin{figure}
+%% %% \centering
+%% %% \includegraphics[width=0.7\linewidth]{Boxplots/Success(Agent).png}
+%% %% \caption{Effect of agent on participant success}\label{fig:succa}
+%% %% \end{figure}
 
 
 
@@ -1437,26 +1389,26 @@ C3 & 2.85,1.84 & 6.70,0.92 & 105.27 & $<$.001\\
 
 
 
-%% ``Move the red block to the right of the blue
-%% block'' (M=5.15, SD=2.08) than they were that a human would
-%% (M=6.48, SD=1.12), F(1,29)=15.15, p<.001, slightly less likely to
-%% believe that a robot would understand ``Do the same thing with the
-%% green block'' (M=4.67, SD=1.99) than they were that a human would
-%% (M=5.76, SD=1.79), F(1,29)=9.16, p=.005, and far less likely to believe that a robot
-%% would understand ``Arrange the blocks like this'' (M=2.85, SD=1.84) than
-%% they were that a human would (M=6.70, SD=0.92), F(1,29)=105.27, p<.001.
+%% %% ``Move the red block to the right of the blue
+%% %% block'' (M=5.15, SD=2.08) than they were that a human would
+%% %% (M=6.48, SD=1.12), F(1,29)=15.15, p<.001, slightly less likely to
+%% %% believe that a robot would understand ``Do the same thing with the
+%% %% green block'' (M=4.67, SD=1.99) than they were that a human would
+%% %% (M=5.76, SD=1.79), F(1,29)=9.16, p=.005, and far less likely to believe that a robot
+%% %% would understand ``Arrange the blocks like this'' (M=2.85, SD=1.84) than
+%% %% they were that a human would (M=6.70, SD=0.92), F(1,29)=105.27, p<.001.
 
-\subsubsection*{Interaction Effects}
-A significant interaction between condition and learner was found on
-adjudication of task complexity: Participants in \textbf{TC} %% the TELEOPERATED
-%% condition
-ranked the arrangements they gave to robots significantly
-more complex (M=4.00, SD=1.37) than they did the arrangements they gave
-to humans (M=2.93, SD=1.34) or the arrangements that participants in
-\textbf{AC} gave to either robots (M=2.53, SD=1.28) or
-humans (M=2.76, SD=1.09), F(1,29)=7.10, p=.012. This effect was
-attenuated by a subsequent analysis of covariance, 
-F(6,58)=2.62, p=.026.
+%% \subsubsection*{Interaction Effects}
+%% A significant interaction between condition and learner was found on
+%% adjudication of task complexity: Participants in \textbf{TC} %% the TELEOPERATED
+%% %% condition
+%% ranked the arrangements they gave to robots significantly
+%% more complex (M=4.00, SD=1.37) than they did the arrangements they gave
+%% to humans (M=2.93, SD=1.34) or the arrangements that participants in
+%% \textbf{AC} gave to either robots (M=2.53, SD=1.28) or
+%% humans (M=2.76, SD=1.09), F(1,29)=7.10, p=.012. This effect was
+%% attenuated by a subsequent analysis of covariance, 
+%% F(6,58)=2.62, p=.026.
 
 \section{Discussion}
 \label{sec:disc}
@@ -1491,31 +1443,32 @@ difference in overall ISA use between humans and
 robots reinforces the importance of enabling robots to understand
 these types of utterances. In fact, some participants
 \textit{exclusively} used ISAs, even when directing a
-purportedly autonomous robot (Fig.~\ref{fig:trans1}):
-\begin{figure}[ht]
-\begin{center}
-\fbox{\parbox{0.95\linewidth}{
-\begin{description}[noitemsep,topsep=0pt]
-\small
-%\itemsep0em 
-\item[H:]Alright Alex, can you take the box B... D over there in quadrant 4 and move it to quadrant 3?
-\item[R:]OK.
-\item[H:]Can you move the box D to your right of box C?
-\item[R:]OK.
-\item[H:]Um... can you move it to the other side of box C?
-\item[R:]OK.
-\item[H:]Perfect.
-\item[H:]Can you go to quadrant 2 and knock over the red tower?
-\item[R:]OK.
-\item[H:]Um can you go to quadrant 1 and knock over the blue tower?
-\item[R:]OK.
-\item[H:]It's all done.
-\end{description}
-}}
-\end{center}
-\caption{\small Transcript excerpt: human instructing ``autonomous'' robot}\label{fig:trans1}
-\end{figure}
-%
+purportedly autonomous robot.
+%% (Fig.~\ref{fig:trans1}):
+%% \begin{figure}[ht]
+%% \begin{center}
+%% \fbox{\parbox{0.95\linewidth}{
+%% \begin{description}[noitemsep,topsep=0pt]
+%% \small
+%% %\itemsep0em 
+%% \item[H:]Alright Alex, can you take the box B... D over there in quadrant 4 and move it to quadrant 3?
+%% \item[R:]OK.
+%% \item[H:]Can you move the box D to your right of box C?
+%% \item[R:]OK.
+%% \item[H:]Um... can you move it to the other side of box C?
+%% \item[R:]OK.
+%% \item[H:]Perfect.
+%% \item[H:]Can you go to quadrant 2 and knock over the red tower?
+%% \item[R:]OK.
+%% \item[H:]Um can you go to quadrant 1 and knock over the blue tower?
+%% \item[R:]OK.
+%% \item[H:]It's all done.
+%% \end{description}
+%% }}
+%% \end{center}
+%% \caption{\small Transcript excerpt: human instructing ``autonomous'' robot}\label{fig:trans1}
+%% \end{figure}
+%% %
 
 
 We hypothesized \textbf{(H2)} that not only would robots described to
@@ -1544,31 +1497,35 @@ suggests that people may view not only a teleoperated robot, but also
 \textit{its teleoperator}, as inferior to a present human counterpart, altering
 both social dynamics and expectations of success.  
 %
-In our experiment, such effects can be observed in
-exchanges such as that seen in Fig.~\ref{fig:trans2}:
+%% In our experiment, such effects can be observed in
+%% exchanges such as that seen in Fig.~\ref{fig:trans2}:
+%% %
+%% \begin{figure}[ht]
+%% \begin{center}
+%% \fbox{\parbox{0.95\linewidth}{
+%% \begin{description}[noitemsep,topsep=0pt]
+%% \small
+%% \item[H:] Turn right 90 degrees
+%% \item[H:] Go forward point-two-five seconds
+%% \item[H:] Turn right 90 degrees
+%% \item[H:] Push box point-two seconds
+%% %\item[H:] Straighten box 
+%% \end{description}
+%% }}
+%% \end{center}
+%% \caption{\small Transcript excerpt: human instructing teleoperator.}\label{fig:trans2}
+%% \end{figure}
 %
-\begin{figure}[ht]
-\begin{center}
-\fbox{\parbox{0.95\linewidth}{
-\begin{description}[noitemsep,topsep=0pt]
-\small
-\item[H:] Turn right 90 degrees
-\item[H:] Go forward point-two-five seconds
-\item[H:] Turn right 90 degrees
-\item[H:] Push box point-two seconds
-%\item[H:] Straighten box 
-\end{description}
-}}
-\end{center}
-\caption{\small Transcript excerpt: human instructing teleoperator.}\label{fig:trans2}
-\end{figure}
-%
-
-What is especially concerning here is not only that this
-participant used direct, low-level language to command a (fellow
-human) teleoperator, but also that the participant's use
-of this language then carried over into his second interaction, now with a
-\textit{co-present human teammate}, as shown in Fig.~\ref{fig:trans3}:
+Especially concerning to us was one subject whose use of direct
+commands when interacting with a robot teleoperator carried over into
+interactions with a co-present human teammate:
+%% What is especially concerning here is not only that this
+%% participant used direct, low-level language to command a (fellow
+%% human) teleoperator, but also that
+%% %the participant's use of this language then
+%% these patterns
+%% carried over into his second interaction, now with a
+%% \textit{co-present human teammate}, as shown in Fig.~\ref{fig:trans3}:
 
 % -- an observation we find particularly troubling. 
 \begin{figure}[ht]
