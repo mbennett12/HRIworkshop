@@ -44,10 +44,10 @@
 % ===============================================================
 %
 % For tracking purposes - this is V2.0 - May 2012
-
-\documentclass[letterpaper, 10 pt, conference]{ieeeconf}
-\IEEEoverridecommandlockouts                                                          
-\overrideIEEEmargins 
+\documentclass[sigconf,authordraft]{acmart}
+              \usepackage{booktabs,enumitem}\acmConference[VAM-HRI'18]{1st
+                International Workshop on Virtual, Augmented, and
+                Mixed Reality for Human-Robot Interaction}{March 2018}{Chicago, Illinois, USA} \acmYear{2018}
 %\documentclass{sig-alternate-05-2015}
 \usepackage{graphicx,caption}
 %\usepackage{hyperref}
@@ -86,8 +86,7 @@
 %\crdata{0-12345-67-8/90/01}  % Allows default copyright data (0-89791-88-6/97/05) to be over-ridden - IF NEED BE.
 % --- End of Author Metadata ---
 
-\title{\LARGE \bf Differences in Interaction Patterns and Perception\\ for
-  Teleoperated and Autonomous Humanoid Robots}
+\title[Interaction with Teleoperated and Autonomous Humanoids]{Differences in Interaction Patterns and Perception\\ for Teleoperated and Autonomous Humanoid Robots}
 %
 % You need the command \numberofauthors to handle the 'placement
 % and alignment' of the authors beneath the title.
@@ -128,15 +127,22 @@
   % e-mail address with \email.
   %
   % 1st. author
-  \author{Maxwell Bennett, Tom Williams, Daria Thames and Matthias Scheutz
-  \thanks{Maxwell Bennett is now with Kindred (www.kindred.ai). Tom Williams,
-    Daria Thames, and Matthias Scheutz are with the Human-Robot Interaction Laboratory in the
-    Department of Computer Science, Tufts University, Medford MA
-    02155, USA, where this work was performed. The authors can be
-    reached at: {\small maxwellbbennett@gmail.com, 
-      williams@cs.tufts.edu, daria.thames@tufts.edu, matthias.scheutz@tufts.edu}
-  }
-  }
+\author{Maxwell Bennett}
+\affiliation{\institution{Kindred}\streetaddress{}\city{}\state{}\postcode{}}
+\email{maxwellbbennett@gmail.com}
+\author{Tom Williams}
+\affiliation{\institution{MIRRORLab\\Colorado School of
+    Mines}\streetaddress{1500 Illinois
+    St.}\city{Golden}\state{CO}\postcode{80202}}
+\email{twilliams@mines.edu}
+\author{Daria Thames}
+\affiliation{\institution{HRILab\\Tufts University}\streetaddress{200
+    Boston Ave.}\city{Medford}\state{MA}\postcode{02155}}
+\email{daria.thames@tufts.edu}
+\author{Matthias Scheutz}
+\affiliation{\institution{HRILab\\Tufts University}\streetaddress{200
+    Boston Ave.}\city{Medford}\state{MA}\postcode{02155}}
+\email{matthias.scheutz@tufts.edu}
  
   % 2nd. author
   %% \alignauthor
@@ -186,7 +192,6 @@
 % is the number that will appear on the first page PLUS the
 % number that will appear in the \additionalauthors section.
 
-\maketitle
 %\thispagestyle{empty}
 %\pagestyle{empty}
 
@@ -273,6 +278,8 @@ learned with respect to the design and use of such teleoperation interfaces.
 
 %\keywords{Teleoperation; telepresence; autonomy; humanoid robots, user
 %studies}
+\maketitle
+
 
 \section{Introduction}
 %% \todo{Why does this start re: physical capabilities, while the
@@ -809,7 +816,7 @@ control. This
 \label{sec:exp}
 We will now describe the salient details of our hypotheses, experimental design,
 procedure, and measurements. We refer the reader interested in an in-depth of
-our hypotheses and work on Indirect Speech Acts (ISAs) to seek 
+our hypotheses and work on Indirect Speech Acts to 
 our previous work~\cite{bennett2017differences}. 
 
 \subsection{Hypotheses}
@@ -878,7 +885,7 @@ reduced cognitive \textit{and} physical capabilities to a co-present human.
 %% (a between-subject manipulation).
 
 Participants interacted with each agent by teaching them how to
-complete a task in a large experiment
+complete a task in a
 room divided into two areas: a
 \textit{teaching} area in which the participant was seated, and a
 large \textit{experiment} area. Participants were seated in front of a
@@ -929,10 +936,10 @@ The agent moved in
 front of the participant, %% . The agent began the interaction by
 introduced themselves, and stated ``Today I will be listening to
 your instructions to arrange this room in the manner you have done
-here", gesturing towards the participant's diorama. Participants then gave
+here,'' gesturing towards the participant's diorama. Participants then gave
 instructions to the agent to arrange the full-size objects to
-replicate the arrangement of their diorama, and the learner carried
-out the instructions to the best of their ability. Both human and
+replicate their diorama arrangement, and the learner complied to the
+best of their ability. Both human and 
 robot learners restricted their utterances to ``Okay'', ``Yes'', and
 ``No'' whenever possible, but also asked ``Are there any more
 instructions?'' if it was not clear whether the interaction was
@@ -978,10 +985,9 @@ This robot,
  made with a combination of 3D printed joints and limbs connected
 by hobbyist servos, has 5 degree-of-freedom (DoF) arms, 10
 under-actuated fingers (a plastic prosthetic hand model), and a 
-2 DoF head. Encompassed in the robot's torso was a small
+2 DoF head. The robot's torso contains a small
 computer and WiFi 
-adapter for wireless communication, with electronics and a battery in its
-base, able to power the robot for a couple hours untethered.
+adapter for wireless communication, and its' base contains a battery to power the robot for several hours untethered.
 
 Importantly, the robot and exo-suit 
 were coupled with an Oculus Rift virtual reality headset so that a
@@ -1113,9 +1119,9 @@ given \$10 as compensation for their time. % for their time.
 \subsection{Measurement}
 In addition to the demographic survey, as previously described,
 questionnaires were used to
-gather data regarding participants' perceptions of their human and
+assess participants' perceptions of their human and
 robot teammates. 
-Participants' perceptions of the robot along a variety of dimensions,
+Participants' perceptions varied along a variety of dimensions,
 including cooperativity, capability, annoyingness, creepiness, and
 responsiveness
 %% belief \textit{before} meeting the learner that the learner would be capable of replicating the
@@ -1424,7 +1430,7 @@ Throughout conducting this experiment and by way of using the exo-suit teleopera
 
 Secondly, the size of the items we chose to move around the room were probably too large in proportion to the size of the robot, which can be gleaned from Fig.~\ref{fig:suitandpris}. Although this choice was deliberate (wanting to maximize the size of items used by the robot so they wouldn't be trivial for the human to also use), it occasionally resulted in the teleoperater being unable to view the surroundings while controlling the robot, e.g. unable to see where to push a box as the head of the robot could only see the box.
 
-Third and lastly, there were a number of learnings about how this teleoperation mechanism affected our experiment design. Because we were using the same teleoperator, exo-suit, and robot for all of our trials, and because we had the capability of seeming exceptionally human-like (with fluid, complex movements, or advanced language), we had to ensure that in any and all trials the robot did not seem too human-like to be obviously perceived as teleoperated, nor too robotic to be obviously perceived as autonomous. Thus, the teleoperator used strategies such as keeping their arms on arm rests whenever possible, so that complex forearm movement did not expose the level of autonomy. Additionally, the text-to-speech interface and set of commands was used to mitigate any variability in language across participants, but this prescribed language did seem to force the human-human interactions to be more awkward than they would have been with more fluid language.
+Finally, there were a number of lessons learned about how this teleoperation mechanism affected our experiment design. Because we were using the same teleoperator, exo-suit, and robot for all of our trials, and because we had the capability of seeming exceptionally human-like (with fluid, complex movements, or advanced language), we had to ensure that in any and all trials the robot did not seem too human-like to be obviously perceived as teleoperated, nor too robotic to be obviously perceived as autonomous. Thus, the teleoperator used strategies such as keeping their arms on arm rests whenever possible, so that complex forearm movement did not expose the level of autonomy. Additionally, the text-to-speech interface and set of commands was used to mitigate any variability in language across participants, but this prescribed language did seem to force the human-human interactions to be more awkward than they would have been with more fluid language.
 
 
 %% Our results suggest that participants perceived the robot as less capable and intelligent than the human, and spoke in more directive commands, which is in line with previous research and our hypotheses. Additionally, participants treated the teleoperated robot with more human-like capacities, such as attributing consciousness to the robot, and talking to the robot more. This evidence suggests that people conducting future robot design and HRI studies ought to heavily consider the ways in which they present the autonomy levels of robots as they strongly influence perceptions of robots and the interactions humans have with robots.
@@ -1751,7 +1757,7 @@ from the US Office of Naval Research and in part by Kindred.
 % The following two commands are all you need in the
 % initial runs of your .tex file to
 % produce the bibliography for the citations in your paper.
-\bibliographystyle{IEEEtran}
+\bibliographystyle{ACM-Reference-Format}
 \bibliography{sigproc}  
 % sigproc.bib is the name of the Bibliography in this case
 % You must have a proper ".bib" file
