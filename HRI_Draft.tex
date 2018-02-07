@@ -323,7 +323,7 @@ in which teleoperator motions are replicated by a
 robot in real time, and
 discuss how it allowed us to better investigate \emph{interaction} differences between
 human-to-human and human-to-robot task instructions, as originally
-described in our previous work~\cite{yourIROSpaper}.
+described in our previous work~\cite{bennett2017differences}.
 
 %% , allowing realistic, spontaneous, task-based
 %% interactions.
@@ -807,18 +807,22 @@ control. This
 
 \section{Methodology}
 \label{sec:exp}
-We will now describe the details of our hypotheses, experimental design, procedure, and measurements.
+We will now describe the salient details of our hypotheses, experimental design,
+procedure, and measurements. We refer the reader interested in an in-depth of
+our hypotheses and work on Indirect Speech Acts (ISAs) to seek 
+our previous work~\cite{bennett2017differences}. 
 
 \subsection{Hypotheses}
-Previous work has shown that humans' use of ISAs with robots 
+
+%Previous work has shown that humans' use of ISAs with robots 
 %% (a
 %% strategy they use near constantly with 
 %% other humans) 
-is more common in contexts with
-conventionalized social norms~\cite{briggs2017jhri}. We thus
-hypothesized \textbf{(H1)} that humans would likely use fewer ISAs
-when instructing robots versus humans, but ISA use would
-be higher when instructing teleoperated versus autonomous robots.
+%is more common in contexts with
+%conventionalized social norms~\cite{briggs2017jhri}. We thus
+%hypothesized \textbf{(H1)} that humans would likely use fewer ISAs
+%when instructing robots versus humans, but ISA use would
+%be higher when instructing teleoperated versus autonomous robots.
 
 Previous research has suggested that robots' size, imprecision
 of movement, and \textit{actual} impoverished capabilities all
@@ -829,14 +833,14 @@ suit-controlled teleoperated humanoid robots like the one used in our
 experiment, which are disadvantaged on all of these fronts relative to
 their human teammate.
  % @TW should we clarify WHY we would expect exacerbation?
-We thus hypothesized \textbf{(H2)}
+We thus hypothesized \textbf{(H1)}
 that both autonomous \textit{and teleoperated} robots would be
 perceived as less intelligent and capable than humans
 performing equivalent tasks.
 
 And because previous research has suggested that higher levels of robot
 autonomy correlate with higher levels of blame and scrutiny
-\cite{cha2015perceived,kim2006should}, we hypothesized \textbf{(H3)}
+\cite{cha2015perceived,kim2006should}, we hypothesized \textbf{(H2)}
 that teleoperated robots would be perceived as more 
 successful after completing a task than would an autonomous robot.
 
@@ -1145,7 +1149,7 @@ and the percentage of
 utterances used by 
 participants that were ISAs, as well as the
 complexity of participants' arrangements, as described in our previous
-work~\cite{yourIROSpaper}.
+work~\cite{bennett2017differences}.
 %% , as assessed by the
 %% metric discussed below. Arrangement complexity
 %% was calculated to use as a covariate in our analyses, as we are
@@ -1209,13 +1213,16 @@ work~\cite{yourIROSpaper}.
 \label{sec:results}
 In this section we provide a brief summary of our experimental
 results. We refer the interested reader to our full results described
-in our previous work~\cite{yourIROSpaper}. 
+in our previous work~\cite{bennett2017differences}. 
 
 %% \subsection{Objective Measures}
-Analysis of our collected data showed that in \textbf{AC}, 70.59\% of participants
-used at least one ISA when directing another human but only 29.41\% of
-participants used one when directing a robot, while in \textbf{TC}, 50.0\% of participants used at least one ISA when speaking with another human, but 56.25\% of participants used
-at least one when speaking to the teleoperated robot. Participants used significantly more words to describe the task in the
+
+%Analysis of our collected data showed that in \textbf{AC}, 70.59\% of participants
+%used at least one ISA when directing another human but only 29.41\% of
+%participants used one when directing a robot, while in \textbf{TC}, 50.0\% of participants used at least one ISA when speaking with another human, but 56.25\% of participants used
+%at least one when speaking to the teleoperated robot.
+
+Participants used significantly more words to describe the task in the
 \textbf{TC} (M=204.88, SD=181.60) than in \textbf{AC} (M=72.82, SD=42.83), F(1,29)=8.05, p=.008. An ANCOVA using task complexity as a covariate 
 attenuated this effect, F(1,29)=4.43, p=.02. 
 %
@@ -1225,7 +1232,7 @@ attenuated this effect, F(1,29)=4.43, p=.02.
 %% \caption{Effect of autonomy on participant verbosity}\label{fig:wca}
 %% \end{figure}
 %
-Finally, %% a significant difference was found with respect to the
+Additionally, %% a significant difference was found with respect to the
 %% number of words used by humans to describe the task to all learners:
 %The results suggest that 
 participants used more words to describe the
@@ -1270,7 +1277,7 @@ strengthened in a subsequent ANCOVA, F(6,58)=3.25, p=.008.
 %% gaze (M=4.06, SD=1.49) than did participants in \textbf{TC} (M=5.09, SD=1.19), F(1,29)=5.43, p=.027.
 
 %% \subsubsection*{Differences by Agent}
-A number of significant differences were found
+Furthermore, a number of significant differences were found
 between perceptions of the human learners and the robot
 learners:%, as seen in Tab.~\ref{tab:diffAgent}:
 %
@@ -1413,6 +1420,13 @@ Perceived Success& 6.78, 0.48 & 6.12, 0.93 & 12.99 & .001\\
 \section{Discussion}
 \label{sec:disc}
 
+Throughout conducting this experiment and by way of using the exo-suit teleoperation interface for numerous hours, a number of challenges and learnings were made. Firstly, given that our experiment required real time remote communication via motor control, vision, and hearing, we found any spikes in latency to be extremely detrimental to the running of the experiment. A spike in latency might lead to: the participant's instruction not being heard, inaccurately executing a movement, or having to operate blindly (depending on the modality affected). With the technology used in this study, latency was not generally an issue unless there was high bandwidth usage or congestion on  back-end server calls. Future work might mitigate this issue by ensuring that high quality WiFi adapters are used, and that high bandwidth internet proliferates the experiment area.
+
+Secondly, the size of the items we chose to move around the room were probably too large in proportion to the size of the robot, which can be gleaned from Fig.~\ref{fig:suitandpris}. Although this choice was deliberate (wanting to maximize the size of items used by the robot so they wouldn't be trivial for the human to also use), it occasionally resulted in the teleoperater being unable to view the surroundings while controlling the robot, e.g. unable to see where to push a box as the head of the robot could only see the box.
+
+Third and lastly, there were a number of learnings about how this teleoperation mechanism affected our experiment design. Because we were using the same teleoperator, exo-suit, and robot for all of our trials, and because we had the capability of seeming exceptionally human-like (with fluid, complex movements, or advanced language), we had to ensure that in any and all trials the robot did not seem too human-like to be obviously perceived as teleoperated, nor too robotic to be obviously perceived as autonomous. Thus, the teleoperator used strategies such as keeping their arms on arm rests whenever possible, so that complex forearm movement did not expose the level of autonomy. Additionally, the text-to-speech interface and set of commands was used to mitigate any variability in language across participants, but this prescribed language did seem to force the human-human interactions to be more awkward than they would have been with more fluid language.
+
+
 %% Our results suggest that participants perceived the robot as less capable and intelligent than the human, and spoke in more directive commands, which is in line with previous research and our hypotheses. Additionally, participants treated the teleoperated robot with more human-like capacities, such as attributing consciousness to the robot, and talking to the robot more. This evidence suggests that people conducting future robot design and HRI studies ought to heavily consider the ways in which they present the autonomy levels of robots as they strongly influence perceptions of robots and the interactions humans have with robots.
 
 
@@ -1428,22 +1442,23 @@ Perceived Success& 6.78, 0.48 & 6.12, 0.93 & 12.99 & .001\\
 %\item a significant effect of Agent on decision of whether the learner would have understood ``arrange the blocks like this" (p$\approx$0.00000000003). Means: Human (6.70), Robot (2.85).
 %\item a significant effect of Agent on decision of whether the learner would have understood ``do the same thing with the green block" (p$\approx$0.005). Means: Human (5.76), Robot (4.67) 
 
-We hypothesized \textbf{(H1)} that participants would use
-more indirect language when communicating with robots in \textbf{TC}
-than they would in \textbf{AC}, but less than 
-when communicating with other humans. We did not find any evidence
-suggesting that participants used a higher \textit{proportion} of
-ISAs when speaking with humans, but found that
-the use of a purportedly autonomous robot (whose use reinforced the
-difference in human-likeness between human-and-robot) may have caused
-participants to be more likely to use indirect language \textit{at
-  all} when directing their human teammate, and less likely when
-directing the robot. Overall, however, the lack of a significant
-difference in overall ISA use between humans and
-robots reinforces the importance of enabling robots to understand
-these types of utterances. In fact, some participants
-\textit{exclusively} used ISAs, even when directing a
-purportedly autonomous robot.
+%We hypothesized \textbf{(H1)} that participants would use
+%more indirect language when communicating with robots in \textbf{TC}
+%than they would in \textbf{AC}, but less than 
+%when communicating with other humans. We did not find any evidence
+%suggesting that participants used a higher \textit{proportion} of
+%ISAs when speaking with humans, but found that
+%the use of a purportedly autonomous robot (whose use reinforced the
+%difference in human-likeness between human-and-robot) may have caused
+%participants to be more likely to use indirect language \textit{at
+%  all} when directing their human teammate, and less likely when
+%directing the robot. Overall, however, the lack of a significant
+%difference in overall ISA use between humans and
+%robots reinforces the importance of enabling robots to understand
+%these types of utterances. In fact, some participants
+%\textit{exclusively} used ISAs, even when directing a
+%purportedly autonomous robot.
+
 %% (Fig.~\ref{fig:trans1}):
 %% \begin{figure}[ht]
 %% \begin{center}
@@ -1471,7 +1486,7 @@ purportedly autonomous robot.
 %% %
 
 
-We hypothesized \textbf{(H2)} that not only would robots described to
+We hypothesized \textbf{(H1)} that not only would robots described to
 participants as \textit{autonomous} be perceived as less
 intelligent and capable than humans would be, but also that robots described
 to participants as \textit{teleoperated} would be perceived with similarly diminished capabilities, even though
@@ -1516,9 +1531,10 @@ both social dynamics and expectations of success.
 %% \caption{\small Transcript excerpt: human instructing teleoperator.}\label{fig:trans2}
 %% \end{figure}
 %
-Especially concerning to us was one subject whose use of direct
-commands when interacting with a robot teleoperator carried over into
-interactions with a co-present human teammate:
+%Especially concerning to us was one subject whose use of direct
+%commands when interacting with a robot teleoperator carried over into
+%interactions with a co-present human teammate:
+
 %% What is especially concerning here is not only that this
 %% participant used direct, low-level language to command a (fellow
 %% human) teleoperator, but also that
@@ -1528,20 +1544,20 @@ interactions with a co-present human teammate:
 %% \textit{co-present human teammate}, as shown in Fig.~\ref{fig:trans3}:
 
 % -- an observation we find particularly troubling. 
-\begin{figure}[ht]
-\begin{center}
-\fbox{\parbox{0.95\linewidth}{
-\begin{description}[noitemsep,topsep=0pt]
-\small
-\item[H:] Move box B towards the wall, uh, point-two seconds.
-\item[H:] Move box B away from the line half a second.
-\item[H:] Turn box B 45 degrees.
-\end{description}
-}}
-\end{center}
-\caption{\small Transcript excerpt: human instructing co-present
-  human.}\label{fig:trans3}
-\end{figure}
+%\begin{figure}[ht]
+%\begin{center}
+%\fbox{\parbox{0.95\linewidth}{
+%\begin{description}[noitemsep,topsep=0pt]
+%\small
+%\item[H:] Move box B towards the wall, uh, point-two seconds.
+%\item[H:] Move box B away from the line half a second.
+%\item[H:] Turn box B 45 degrees.
+%\end{description}
+%}}
+%\end{center}
+%\caption{\small Transcript excerpt: human instructing co-present
+%  human.}\label{fig:trans3}
+%\end{figure}
 %% Future research in this area might focus on understanding what
 %% aspects of the robot's appearance and behaviors influence this
 %% belief, e.g. its size or its fluidity of movement, and how a
@@ -1552,7 +1568,7 @@ interactions with a co-present human teammate:
 %% perceptions of both robot and teleoperator.
 
 Finally, because higher levels of autonomy have previously been correlated with
-higher levels of blame and scrutiny, we hypothesized \textbf{(H3)}
+higher levels of blame and scrutiny, we hypothesized \textbf{(H2)}
 that autonomous robots would receive less credit for successful
 completion of the task than would teleoperated robots (i.e., that teleoperated
 robots would be rated as more successful). While we did not find
@@ -1565,7 +1581,7 @@ arrangements. This suggests that participants may have attributed more
 of the credit for task success to the \textit{learner} in \textbf{TC},
 but to have retrospectively assumed \textit{simplicity
   of arrangement} in \textbf{AC}, which would indirectly
-support H3.
+support H2.
 
 
 %% was also found, though not as directly as with the evidence for
@@ -1665,15 +1681,18 @@ autonomous and teleoperated humanoid robots controlled through identical
 immersive virtual reality interfaces in which teleoperator motions are
 replicated by the robot in real time.
 
-Our results suggest that humans will use politeness
-strategies with human teammates, autonomous robot teammates, and
-teleoperated robot teammates, at an equivalent rate, reinforcing
-recent findings that autonomous robots must be able to
-comprehend and appropriately respond to human utterances that follow
-such strategies.
+%Our results suggest that humans will use politeness
+%strategies with human teammates, autonomous robot teammates, and
+%teleoperated robot teammates, at an equivalent rate, reinforcing
+%recent findings that autonomous robots must be able to
+%comprehend and appropriately respond to human utterances that follow
+%such strategies.
 %
-Our results also suggest variations in how these three types of
-teammates were perceived. Specifically, our results suggest that human-teleoperated robots were perceived as less intelligent than human
+Our results suggest variations in how 
+%these three types of teammates 
+human teammates, autonomous robot teammates, and
+teleoperated robot teammates
+were perceived. Specifically, our results suggest that human-teleoperated robots were perceived as less intelligent than human
 teammates; a finding 
 with serious implications for human-robot team dynamics.
 
@@ -1690,13 +1709,13 @@ robots; (2) how humans' interaction
 patterns with autonomous and teleoperated robots will change across
 long-term interactions, and the effects that long-term teleoperation
 of a robot may have on the cohesiveness of mixed human-robot teams;
-(3) what aspects of a teleoperated robot's appearance and
+and lastly, (3) what aspects of a teleoperated robot's appearance and
 behavior contribute to the decreased perceptions of its teleoperator's
 intelligence and consciousness.
-Finally, (4) in this paper we specifically examined indirect speech
-act usage; future work
-will of course be needed to examine the host of other linguistic
-phenomena which may differ between human-human and human-robot interactions.
+%Finally, (4) in this paper we specifically examined indirect speech
+%act usage; future work
+%will of course be needed to examine the host of other linguistic
+%phenomena which may differ between human-human and human-robot interactions.
 
 
 %and on the relationships between a teleoperator and their other
