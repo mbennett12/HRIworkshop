@@ -128,7 +128,7 @@
   %
   % 1st. author
 \author{Maxwell Bennett}
-\affiliation{\institution{Kindred}\streetaddress{}\city{}\state{}\postcode{}}
+\affiliation{\institution{Kindred}\streetaddress{169 Stillman St.}\city{San Francisco}\state{California}\postcode{94110}}
 \email{maxwellbbennett@gmail.com}
 \author{Tom Williams}
 \affiliation{\institution{MIRRORLab\\Colorado School of
@@ -322,7 +322,7 @@ Little empirical research in HRI has investigated
 perceptions of teleoperated humanoid robots, and to the best of our
 knowledge all previous research investigating human perceptions of
 autonomous versus teleoperated robots has been \textit{observational},
-and has used robots controlled
+in addition to using robots controlled
 through graphical interfaces.
 
 In this paper we describe a novel VR teleoperation interface
@@ -644,7 +644,7 @@ control. This
  not only allows the teleoperator to visually explore their environment the way they would if they were present in that environment, but also
  provides remote teammates information regarding the location of the
  teleoperator's gaze, which is a valuable source of information both for completion of task-based goals and for engaging in dialogue-based
- interaction~\cite{mutlu2009footing,Kindred}
+ interaction~\cite{mutlu2009footing}
 
 
 %
@@ -898,7 +898,7 @@ and three colored towers (Lego blocks in the diorama and
 aluminum cans in the experiment area). 
 
 Participants were told to arrange their diorama \emph{however they
-  wished} (excepting that cans could not be
+  wished} (except that cans could not be
 translated, and boxes could not be flipped over or stacked), %% (a crucial decision made to reduce the potential for
 %% experimental bias),
 after which they would be tasked with teaching a human or robot agent how to
@@ -941,12 +941,9 @@ instructions to the agent to arrange the full-size objects to
 replicate their diorama arrangement, and the learner complied to the
 best of their ability. Both human and 
 robot learners restricted their utterances to ``Okay'', ``Yes'', and
-``No'' whenever possible, but also asked ``Are there any more
-instructions?'' if it was not clear whether the interaction was
-over. The robot's utterances were selected by a human confederate,
+``No'' whenever possible. The robot's utterances were selected by a human confederate,
 and synthesized using a text-to-speech interface.  
-Once the interaction was finished, the agent said ``Goodbye'' and left
-the room.  
+Once the interaction was over, the agent said ``Goodbye'' and exited.  
 
 \subsection{Teleoperation Interfaces}
 %Let us now highlight
@@ -1428,7 +1425,8 @@ Perceived Success& 6.78, 0.48 & 6.12, 0.93 & 12.99 & .001\\
 
 Throughout conducting this experiment and by way of using the exo-suit teleoperation interface for numerous hours, a number of challenges and learnings were made. Firstly, given that our experiment required real time remote communication via motor control, vision, and hearing, we found any spikes in latency to be extremely detrimental to the running of the experiment. A spike in latency might lead to: the participant's instruction not being heard, inaccurately executing a movement, or having to operate blindly (depending on the modality affected). With the technology used in this study, latency was not generally an issue unless there was high bandwidth usage or congestion on  back-end server calls. Future work might mitigate this issue by ensuring that high quality WiFi adapters are used, and that high bandwidth internet proliferates the experiment area.
 
-Secondly, the size of the items we chose to move around the room were probably too large in proportion to the size of the robot, which can be gleaned from Fig.~\ref{fig:suitandpris}. Although this choice was deliberate (wanting to maximize the size of items used by the robot so they wouldn't be trivial for the human to also use), it occasionally resulted in the teleoperater being unable to view the surroundings while controlling the robot, e.g. unable to see where to push a box as the head of the robot could only see the box.
+Secondly, the size of the items we chose to move around the room were slightly too large in proportion to the size of the robot, which can be gleaned from Fig.~\ref{fig:suitandpris}. Although this choice was deliberate (wanting to maximize the size of items used by the robot so they wouldn't be trivial for the human to also use), it occasionally resulted in the teleoperater being unable to view the surroundings while controlling the robot, as the robot's peripheral
+vision might have been obscured by the item.
 
 Finally, there were a number of lessons learned about how this teleoperation mechanism affected our experiment design. Because we were using the same teleoperator, exo-suit, and robot for all of our trials, and because we had the capability of seeming exceptionally human-like (with fluid, complex movements, or advanced language), we had to ensure that in any and all trials the robot did not seem too human-like to be obviously perceived as teleoperated, nor too robotic to be obviously perceived as autonomous. Thus, the teleoperator used strategies such as keeping their arms on arm rests whenever possible, so that complex forearm movement did not expose the level of autonomy. Additionally, the text-to-speech interface and set of commands was used to mitigate any variability in language across participants, but this prescribed language did seem to force the human-human interactions to be more awkward than they would have been with more fluid language.
 
@@ -1499,12 +1497,13 @@ to participants as \textit{teleoperated} would be perceived with similarly dimin
 in reality all three learners had identical cognitive capabilities. In
 fact, this is just what we observed. Our results showed that
 participants rated both autonomous \emph{and teleoperated} robots as less understanding of their
-instructions and less likely to understand high level commands such as
-``Arrange the blocks \textit{like this}' (C3). This is striking, as such
+instructions and less likely to understand high level commands.
+% such as
+%``Arrange the blocks \textit{like this}' (C3). 
+This is striking, as such
 ratings should depend only on the \emph{mental faculties} of the
 learner, and yet, participants rated the human-teleoperated robot no
-differently in this respect than they did the purportedly autonomous
-robot. Furthermore, both autonomous \textit{and teleoperated} robots 
+differently in this respect than they did in \textbf{AC}. Furthermore, both autonomous \textit{and teleoperated} robots 
 were rated as more annoying, creepy, harder to interact with, and
 overall less capable \textit{and conscious} than their human counterparts.
 
