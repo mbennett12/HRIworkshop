@@ -44,10 +44,14 @@
 % ===============================================================
 %
 % For tracking purposes - this is V2.0 - May 2012
-\documentclass[sigconf,authordraft]{acmart}
+\documentclass[sigconf]{acmart}
               \usepackage{booktabs,enumitem}\acmConference[VAM-HRI'18]{1st
                 International Workshop on Virtual, Augmented, and
-                Mixed Reality for Human-Robot Interaction}{March 2018}{Chicago, Illinois, USA} \acmYear{2018}
+                Mixed Reality for Human-Robot Interaction}{March
+                2018}{Chicago, Illinois, USA} \acmYear{2018}
+\makeatletter
+\renewcommand\@formatdoi[1]{\ignorespaces}
+\makeatother
 %\documentclass{sig-alternate-05-2015}
 \usepackage{graphicx,caption}
 %\usepackage{hyperref}
@@ -70,6 +74,8 @@
 
 %% % DOI
 %% \doi{10.475/123_4}
+\renewcommand\footnotetextcopyrightpermission[1]{} 
+
 
 %% % ISBN
 %% \isbn{123-4567-24-567/08/06}
